@@ -1,0 +1,81 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Enchant : MonoBehaviour {
+    
+
+
+    public enum Primary_Stats_Enchants
+    {
+        Strength,
+        Dexterity,
+        Intellect,
+        Endurance,
+        Vitality,
+        Agility,
+        Luck
+    }
+
+    public enum Secondary_Stats_Enchants
+    {
+        Physical_Damage,
+        Magical_Damage,
+        Physical_Resistance,
+        Magic_Resistance,
+        Health_Points,
+        Spell_Points,
+        Energy_Points,
+        Perception,
+        Ferocity,
+        Damage_Percent,
+        Life_Percent,
+    }
+
+    public enum Tertiary_Stats_Enchants
+    {
+        Speed,
+        Evasion,
+        Spirit,
+        Wisdom,
+        Magic_Drop_Chance,
+        Currency_Drop_Increase,
+        Armor_Penetration,
+        Spell_Penetration,
+    }
+
+    public enum Tier1_Damage_Enchants
+    {
+        Blood1,
+        Poison1,
+        Physical1,
+        Flames1,
+
+    }
+
+    public enum Teir2_Damage_Enchants
+    {
+
+    }
+
+    public enum Teir3_Damage_Enchants
+    {
+
+    }
+
+    public enum Resistance_Enchants
+    {
+
+    }
+
+    public enum Modifier_Enchants
+    {
+
+    }
+
+    public Enchant GetEnchant()
+    {
+        return this;
+    }
+
+}
