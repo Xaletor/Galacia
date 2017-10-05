@@ -10,6 +10,7 @@ public class Player_Stats_UI : MonoBehaviour {
     public Text nameText;
     public Text classText;
     public Text levelText;
+    public Text goldText;
 
     [Header("Vitals")]
     public Text damageText;
@@ -47,11 +48,13 @@ public class Player_Stats_UI : MonoBehaviour {
     public Text lspText;
 
 
-    public void SetMain(string pname, string pclass, string plevel)
+    public void SetMain(string pname, string pclass, string plevel, float gold)
     {
         nameText.text = "Name : " + pname;
         classText.text = "Class : " + pclass;
         levelText.text = "Level : " + plevel;
+        int[] monies = Currency.ConvertValueToCredits(gold);
+        goldText.text = Currency.ConvertCreditsToText(monies);
     }
 
     public void SetPrimaries(string pstr, string pdex, string pint, string pend, string pvit, string pagi, string pluk)

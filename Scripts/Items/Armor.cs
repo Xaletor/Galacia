@@ -41,18 +41,22 @@ public class Armor : Item {
     public void InitializeArmor(Item_Database.Armor_Database armor, Item i)
     {
         int a_num = (int)armor;
-        SetArmor(a_num, i);
+        Armor_Database ab = GameObject.Find("Database_Armor").GetComponent<Armor_Database>();
+        var abi = ab.GetIcon(a_num, itemQuality);
+        //Debug.Log(a_num);
+        i.slotType = abi.Itemtype;
+        SetArmorInfo(a_num, i);
     }
 
     // Sets the weapon with the weapons id and applies it to the item
-    public void SetArmor(int a, Item i)
+    public void SetArmorInfo(int a, Item i)
     {
-        if (a >= 301 && a < 312)
+        if (a >= 301 && a < 313)
         {
             if (i.slotType == Item_Slot.SlotType.Head)
             {
                 // Light Helmet
-                i.SetName("Light niipll");
+                i.SetName("Light Helmet");
                 i.itemDesc = "Test desc for light helmet.";
                 i.SetItemId(a);
                 i.itemValue = 0.35f;
@@ -107,7 +111,7 @@ public class Armor : Item {
                 i.armor = (int)Random.Range(m + (i.itemLevel * m_armor_mod), ((m - 1) + (3 * (i.itemLevel / 2)) + (i.itemLevel * m_armor_mod)));
             }
         }
-        else if (a >= 325 && a < 348)
+        else if (a >= 325 && a < 349)
         {
             if (i.slotType == Item_Slot.SlotType.Head)
             {
@@ -157,6 +161,10 @@ public class Armor : Item {
             i.itemValue = 0.35f;
             i.armor = (int)Random.Range(l + (i.itemLevel * l_armor_mod), ((l - 1) + (3 * (i.itemLevel / 2)) + (i.itemLevel * l_armor_mod + 1)));
 
+        }
+        else
+        {
+            Debug.Log("Item label error! ID: " + a + ", Name: " + i.itemName);
         }
 
     }

@@ -181,6 +181,14 @@ public class Item_Chest : MonoBehaviour {
                     p_Inv.AddItemToInventory(item);
                 }
             }
+            else if(chestType == ChestType.Money)
+            {
+                var p_Stats = GameObject.Find("Player").GetComponent<Player_Main>().pS;
+                p_Inv.playerMoney += item.itemValue;
+                p_Stats.UpdateStatsFromEquipped();
+            }
+            
+            
             isopen = true;
         }
         yield return null;

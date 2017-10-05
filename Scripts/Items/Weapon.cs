@@ -23,8 +23,8 @@ public class Weapon : Item {
             i.itemDesc = "Test desc for sword.";
             i.SetItemId(w);
             i.itemValue = 0.50f;
-            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.15f), 3 + (int)(i.itemLevel * 0.15f));
-            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.35f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 0.35f)));
+            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.45f), 3 + (int)(i.itemLevel * 0.75f));
+            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.8f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 1.2f)));
             i.slotType = Item_Slot.SlotType.Weapon;
         }
 
@@ -36,8 +36,8 @@ public class Weapon : Item {
             i.itemDesc = "Test desc for 2H - sword.";
             i.SetItemId(w);
             i.itemValue = 0.50f;
-            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.15f), 3 + (int)(i.itemLevel * 0.15f));
-            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.35f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 0.35f)));
+            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.45f), 3 + (int)(i.itemLevel * 0.75f));
+            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.8f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 1.2f)));
             i.slotType = Item_Slot.SlotType.Weapon;
         }
 
@@ -49,8 +49,8 @@ public class Weapon : Item {
             i.itemDesc = "Test desc for dagger.";
             i.SetItemId(w);
             i.itemValue = 0.50f;
-            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.15f), 3 + (int)(i.itemLevel * 0.15f));
-            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.35f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 0.35f)));
+            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.45f), 3 + (int)(i.itemLevel * 0.75f));
+            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.8f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 1.2f)));
             i.slotType = Item_Slot.SlotType.Weapon;
         }
 
@@ -62,8 +62,8 @@ public class Weapon : Item {
             i.itemDesc = "Test desc for mace.";
             i.SetItemId(w);
             i.itemValue = 0.50f;
-            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.15f), 3 + (int)(i.itemLevel * 0.15f));
-            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.35f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 0.35f)));
+            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.45f), 3 + (int)(i.itemLevel * 0.75f));
+            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.8f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 1.2f)));
             i.slotType = Item_Slot.SlotType.Weapon;
         }
         else if (w >= 137 && w < 144)
@@ -74,8 +74,8 @@ public class Weapon : Item {
             i.itemDesc = "Test desc for hammer.";
             i.SetItemId(w);
             i.itemValue = 0.50f;
-            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.15f), 3 + (int)(i.itemLevel * 0.15f));
-            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.35f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 0.35f)));
+            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.45f), 3 + (int)(i.itemLevel * 0.75f));
+            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.8f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 1.2f)));
             i.slotType = Item_Slot.SlotType.Weapon;
         }
         else if (w >= 145 && w < 152)
@@ -86,8 +86,8 @@ public class Weapon : Item {
             i.itemDesc = "Test desc for axe.";
             i.SetItemId(w);
             i.itemValue = 0.50f;
-            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.15f), 3 + (int)(i.itemLevel * 0.15f));
-            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.35f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 0.35f)));
+            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.45f), 3 + (int)(i.itemLevel * 0.75f));
+            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.8f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 1.2f)));
             i.slotType = Item_Slot.SlotType.Weapon;
         }
         else if (w >= 153 && w < 158)
@@ -98,8 +98,8 @@ public class Weapon : Item {
             i.itemDesc = "Test desc for spear.";
             i.SetItemId(w);
             i.itemValue = 0.50f;
-            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.15f), 3 + (int)(i.itemLevel * 0.15f));
-            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.35f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 0.35f)));
+            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.45f), 3 + (int)(i.itemLevel * 0.75f));
+            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.8f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 1.2f)));
             i.slotType = Item_Slot.SlotType.Weapon;
         }
         else if (w >= 159 && w < 166)
@@ -110,8 +110,8 @@ public class Weapon : Item {
             i.itemDesc = "Test desc for staff.";
             i.SetItemId(w);
             i.itemValue = 0.50f;
-            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.15f), 3 + (int)(i.itemLevel * 0.15f));
-            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.35f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 0.35f)));
+            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.45f), 3 + (int)(i.itemLevel * 0.75f));
+            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.8f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 1.2f)));
             i.slotType = Item_Slot.SlotType.Weapon;
         }
         else if (w >= 167 && w < 170)
@@ -122,8 +122,8 @@ public class Weapon : Item {
             i.itemDesc = "Test desc for fist.";
             i.SetItemId(w);
             i.itemValue = 0.50f;
-            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.15f), 3 + (int)(i.itemLevel * 0.15f));
-            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.35f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 0.35f)));
+            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.45f), 3 + (int)(i.itemLevel * 0.75f));
+            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.8f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 1.2f)));
             i.slotType = Item_Slot.SlotType.Weapon;
         }
         else if (w >= 171)
@@ -134,11 +134,13 @@ public class Weapon : Item {
             i.itemDesc = "Test desc for bow.";
             i.SetItemId(w);
             i.itemValue = 0.50f;
-            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.15f), 3 + (int)(i.itemLevel * 0.15f));
-            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.35f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 0.35f)));
+            i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.45f), 3 + (int)(i.itemLevel * 0.75f));
+            i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 0.8f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 1.2f)));
             i.slotType = Item_Slot.SlotType.Weapon;
         }
 
+        i.minDamage = Random.Range(1 + (int)(i.itemLevel * 0.75f), 3 + (int)(i.itemLevel * 1.5f));
+        i.maxDamage = Random.Range(3 + (int)(i.itemLevel * 1.5f), (int)(6 + (itemLevel / 5f) + (int)(i.itemLevel * 2.25f)));
     }
 
 }

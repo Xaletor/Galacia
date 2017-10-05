@@ -367,7 +367,7 @@ public class Magic_Database : MonoBehaviour {
             m.life = poisonSounds[1];
             m.death = poisonSounds[2];
             m.circleColor = Galacia_Colors.Poison;
-            m.manaCost = 2 + (int)((m.skillLevel - 1) * 1.5f);
+            m.manaCost = 2;//2 + (int)((m.skillLevel - 1) * 1.5f);
             m.spellSpeed = 9f;
             m.isPiercing = false;
             m.d = new Damage(Damage.DamageType.Poison, 15);

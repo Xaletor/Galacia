@@ -786,15 +786,12 @@ public class Item {
         }
         else if (itemType == ItemTypes.Armor)
         {
-            if(item_Id == -1)
-            {
-                item_Id = Random.Range(301, 395);
-            }
+
             Armor_Database ab = GameObject.Find("Database_Armor").GetComponent<Armor_Database>();
             var abi = ab.GetIcon(item_Id, itemQuality);
             Debug.Log(item_Id);
             icon = abi.image;
-            slotType = abi.Itemtype;
+            
         }
         else if (itemType == ItemTypes.Monster)
         {
@@ -1485,37 +1482,37 @@ public class Item {
         else if (itemQuality == ItemQualityModifiers.Fine)
         {
             maxEnchants = 2; // 1 x Primary Stat, 1 x Any
-            v_mod = 2f;
+            v_mod = 1.25f;
             i_mod = 1.1f;
         }
         else if (itemQuality == ItemQualityModifiers.Great)
         {
             maxEnchants = 3; // 1 x Primary Stat, 1 x Secondary Stat, 1 x Any
-            v_mod = 4f;
+            v_mod = 1.5f;
             i_mod = 1.2f;
         }
         else if (itemQuality == ItemQualityModifiers.Masterful)
         {
             maxEnchants = 4; // 1 x Primary Stat, 1 x Secondary Stat, 2 x Any
-            v_mod = 8f;
+            v_mod = 1.75f;
             i_mod = 1.3f;
         }
         else if (itemQuality == ItemQualityModifiers.Epic)
         {
             maxEnchants = 5; // 1 x Primary Stat, 1 x Secondary Stat, 1 x Damage Stat, 2 x Any
-            v_mod = 16f;
+            v_mod = 2f;
             i_mod = Random.Range(1.4f,1.9f);
         }
         else if (itemQuality == ItemQualityModifiers.Legendary)
         {
             maxEnchants = 6; // 2 x Primary Stat, 1 x Secondary Stat, 1 x Damage Stat, 2 x Any
-            v_mod = 32f;
+            v_mod = 2.5f;
             i_mod = Random.Range(2f, 2.8f);
         }
         else if (itemQuality == ItemQualityModifiers.Godlike)
         {
             maxEnchants = 8; // 2 x Primary Stat, 2 x Secondary Stat, 2 x Damage Stat, 2 x Any
-            v_mod = 64f;
+            v_mod = 5f;
             i_mod = Random.Range(3f, 3.8f);
         }
     }

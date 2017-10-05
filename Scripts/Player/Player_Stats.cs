@@ -542,7 +542,8 @@ public class Player_Stats : MonoBehaviour {
 
     void UpdateUI()
     {
-        pstats.SetMain(playerName, className, playerLevel.ToString());
+        Player_Inventory pi = GetComponent<Player_Inventory>();
+        pstats.SetMain(playerName, className, playerLevel.ToString(),pi.playerMoney);
         pstats.SetVitals(minDamage_P.ToString("0"), maxDamage_P.ToString("0"), armor.ToString("0"), currentShield.ToString("0"), shieldPoints.ToString("0"), currentHP.ToString("0"), healthPoints.ToString("0"), currentSP.ToString("0"), spellPoints.ToString("0"), currentEP.ToString("0"), energyPoints.ToString("0"));
         pstats.SetPrimaries(mstrength.ToString("0"), mdexterity.ToString("0"), mintellect.ToString("0"), mendurance.ToString("0"), mvitality.ToString("0"), magility.ToString("0"), mluck.ToString("0"));
         pstats.SetSecondaries(perception.ToString("0"), ferocity.ToString("0"), speed.ToString("0"), evasion.ToString("0"), spirit.ToString("0"), wisdom.ToString("0"), armorPen.ToString("0"));

@@ -9,13 +9,16 @@ public class Player_Main : MonoBehaviour {
     public Player_Equipped pE;
     public Player_Movement pM;
 
+    public RuntimeAnimatorController[] gender;
+    int genderIndex = 0;
+
     //Collider2D movC;
     public Collider2D atkT;
     //public Collider2D hitT;
 
     public static bool isReady;
     public bool invulnerable = false;
-
+    int spellCastIndex = 0;
     int testMagicLevel = 1;
     public GameObject magicCircle;
     float invulTime = 0f;
@@ -32,6 +35,19 @@ public class Player_Main : MonoBehaviour {
 
     public void FixedUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            var ani = GetComponent<Animator>();
+            if(genderIndex == 0)
+            {
+                genderIndex = 1;
+            }
+            else if(genderIndex == 1)
+            {
+                genderIndex = 0;
+            }
+            ani.runtimeAnimatorController = gender[genderIndex];
+        }
         if (invulnerable)
         {
             invulTime -= Time.deltaTime;
@@ -45,8 +61,34 @@ public class Player_Main : MonoBehaviour {
     }
     ///TEST
     ///
+
+    public void ModifySpellIndex(int i)
+    {
+        int min = 0;
+        int max = 3;
+
+        spellCastIndex += i;
+
+        if (spellCastIndex < 0)
+        {
+            spellCastIndex = max;
+        }
+        if(spellCastIndex > max)
+        {
+            spellCastIndex = min;
+        }
+    }
+
     public void TestMagicCast()
     {
+        if (Input.GetKeyDown(KeyCode.LeftBracket))
+        {
+            ModifySpellIndex(-1);
+        }
+        if (Input.GetKeyDown(KeyCode.RightBracket))
+        {
+            ModifySpellIndex(1);
+        }
         if (Input.GetKeyDown(KeyCode.M))
         {
             testMagicLevel++;
@@ -65,10 +107,37 @@ public class Player_Main : MonoBehaviour {
         }
     }
 
+    Magic GetTestMagic()
+    {
+        Magic m = null;
+        int mod = 0;
+
+        if (spellCastIndex == 0)
+        {
+            m = new Magic(Magic_Database.Magic_Type.Fire, mod + 1);
+        }
+        if (spellCastIndex == 1)
+        {
+            m = new Magic(Magic_Database.Magic_Type.Aether, mod + 1);
+        }
+        if (spellCastIndex == 2)
+        {
+            m = new Magic(Magic_Database.Magic_Type.Poison, mod + 1);
+        }
+        if (spellCastIndex == 3)
+        {
+            m = new Magic(Magic_Database.Magic_Type.Poison, mod + 2);
+        }
+
+        return m;
+    }
+
     public IEnumerator CastMagic()
     {
-        int mod = 0;
-        Magic m = new Magic(Magic_Database.Magic_Type.Fire, mod + 1);
+        
+        Magic m = GetTestMagic();
+        int mod = (spellCastIndex == 3)?1:0;
+
         m.SetMagicDamage(pS.intellect);
         m.SetMagicSkillLevel(testMagicLevel);
         if ((pS.currentSP - m.manaCost) > 0)

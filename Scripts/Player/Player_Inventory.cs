@@ -11,7 +11,7 @@ public class Player_Inventory : MonoBehaviour
     public List<Item_Slot> invSlots;
     public List<Item> inventory_Items = new List<Item>();
     public Item_Display_UI idu;
-    public int playerMoney = 0;
+    public float playerMoney = 0;
     public bool inventoryFull = false;
 
     void Awake()
